@@ -8,7 +8,7 @@
 # Site settings
 title: Fintech Ecosystem
 description: > # this means to ignore newlines until "baseurl:"
-  Ontological modelling of the Fintech ecosystem, a source of solutions to operational risks.
+  Ontological modelling of the Fintech ecosystem, a source of solutions to operational risks
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://fintechecosystem.github.io/" # the base hostname & protocol for your site
 
