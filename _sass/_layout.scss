@@ -142,10 +142,6 @@
  * Posts  **********************************************************
  */
 
-.post {
-  text-align: center;
-}
-
 .post-header {
   margin-bottom: $vertical-spacing-unit;
 }
@@ -189,6 +185,28 @@
 .post-link {
   display: block;
   font-size: 42px;
+}
+
+/**
+ * Landing page **********************************************************
+ */
+
+.landing-page-header {
+  margin-bottom: $vertical-spacing-unit;
+}
+
+.landing-page-title {
+  font-size: 42px;
+  text-align: center;
+  letter-spacing: -1px;
+  line-height: 1;
+  @include media-query($on-laptop) {
+    font-size: 36px;
+  }
+}
+
+.landing-page-content {
+  text-align: center;
 }
 
 /**
