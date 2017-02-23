@@ -1,0 +1,37 @@
+---
+layout: page
+title: Contact us
+permalink: /contact
+---
+Use this form to contact us :
+<br>
+<br>
+<form id="formaction" class="pure-form pure-form-aligned" method="POST">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" placeholder="Name">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="Email">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message"></textarea>
+    </div>
+
+    <div class="pure-controls">
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="FinTech Ecosystem - New message" />
+      <button type="submit" class="pure-button pure-button-primary">Submit</button>
+    </div>
+  </fieldset>
+</form>
+
+<script>
+  var contactform =  document.getElementById('formaction');
+  contactform.setAttribute('action', '//formspree.io/' + 'elie.abilahoud' + '@' + 'ucd' + '.' + 'ie');
+</script>
