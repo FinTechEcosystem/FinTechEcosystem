@@ -38,24 +38,21 @@ permalink: /
     <div class="contact-inner">
       <h2 class="title  text-center">Contact</h2>
       <p class="intro  text-center"></p>
+      {% for member in site.data.team %}
       <div class="author-message">
         <div class="profile">
-          <img class="img-responsive" src="" alt="" />
+          {% if member.img %}
+          <img class="img-responsive" src="/img/{{ member.img }}" alt="{{ member.name }}" />
+          {% else %}
+          <img class="img-responsive" src="/img/no_profile_img.jpg" alt="No picture provided" />
+          {% endif %}
         </div>
         <div class="speech-bubble">
-          <h3 class="sub-title">Elie Abi-Lahoud</h3>
-          <p>Elie Abi-Lahoud, PhD, is Research Fellow of the Governance Risk and Compliance Technology Centre (GRCTC) hosted by University College Cork. He played a leading role in founding GRCTC and continues to engage the multidisciplinary research team with academic and industry partners. He is interested in socio-technical systems and user-centered design. Elie is currently leading multiple projects with thought leaders in the Financial Services industry. He is a regular speaker at industry and standards events, published over 15 peer-reviewed papers and recently advised 8 companies (members of GRCTC) on Semantic Technology strategy and deployment.</p>
+          <h3 class="sub-title">{{ member.name }}</h3>
+          <p>{{ member.bio }}</p>
         </div>
       </div>
-      <div class="author-message">
-        <div class="profile">
-          <img class="img-responsive" src="" alt="" />
-        </div>
-        <div class="speech-bubble">
-          <h3 class="sub-title">Paul-Emmanuel Raoul</h3>
-          <p>Self-educated since his childhood, Paul-Emmanuel is a technology and science lover with a deep passion for IT and open-source software, and obsessed by automation.</p>
-        </div>
-      </div>
+      {% endfor %}
       <div class="clearfix"></div>
       <div class="info text-center">
         <h4 class="sub-title">Get Connected</h4>
