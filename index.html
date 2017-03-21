@@ -35,6 +35,11 @@ permalink: /
     <h2 class="title text-center">Our sponsors</h2>
     <div class="row">
     {% for sponsor in site.data.sponsors %}
+      {% assign row_index = forloop.index | modulo: 3 %}
+      {% if row_index == 1 and forloop.first == false %}
+    </div>
+    <div class="row">
+      {% endif %}
       <div class="sponsor col-md-4 col-sm-6 col-xs-12">
         <img src="/img/{{ sponsor.img }}" alt="{{ sponsor.name }}">
       </div>
