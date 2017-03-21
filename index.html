@@ -31,6 +31,16 @@ permalink: /
     <h2 class="title text-center">What is it ?</h2>
     <p class="intro text-center">This project explores, using ontological modelling, the Fintech Ecosystem. It seeks, inter alia, to improve our understanding of this Ecosystem, which is a critically important environment from which solutions to operational risks at financial institutions frequently arise. We combine novel knowledge representation and data modelling techniques to reveal links between concepts represented in the data that otherwise are not accessible.</p>
   </div>
+  <div class="container">
+    <h2 class="title text-center">Our sponsors</h2>
+    <div class="row">
+    {% for sponsor in site.data.sponsors %}
+      <div class="sponsor col-md-4 col-sm-6 col-xs-12">
+        <img src="/img/{{ sponsor.img }}" alt="{{ sponsor.name }}">
+      </div>
+    {% endfor %}
+    </div>
+  </div>
 </section>
 
 <section id="contact" class="contact section has-pattern">
