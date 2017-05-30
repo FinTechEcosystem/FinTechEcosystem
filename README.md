@@ -8,3 +8,6 @@ This website is built using [Jekyll][jekyll], based on the [\*folio][folio] temp
  [jekyll]: http://jekyllrb.com/
  [folio]: https://github.com/bogoli/-folio/
  [gh-pages]: https://pages.github.com/
+
+First version uses
+http://themes.3rdwavemedia.com/demo/devaid/
