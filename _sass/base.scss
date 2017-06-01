@@ -373,11 +373,11 @@ pre code {
                 content: "";
                 display: inline-block;
                 width: 0;
-            	height: 0;
-            	border-left: 10px solid transparent;
-            	border-right: 10px solid transparent;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
 
-            	border-top: 10px solid lighten($color, 40%);
+                border-top: 10px solid lighten($color, 40%);
             }
         }
         .icon-holder {
@@ -458,10 +458,10 @@ pre code {
                 content: "";
                 display: inline-block;
                 width: 0;
-            	height: 0;
-            	border-top: 10px solid transparent;
-            	border-bottom: 10px solid transparent;
-            	border-right: 10px solid darken($color, 3%);
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-right: 10px solid darken($color, 3%);
             }
             .source {
                 margin-top: 30px;
@@ -491,10 +491,10 @@ pre code {
         display: inline-block;
         margin: 0 auto;
         li {
-           float: left;
-           &.last {
-               margin-right: 0;
-           }
+            float: left;
+            &.last {
+                margin-right: 0;
+            }
         }
 
         a {
@@ -600,10 +600,10 @@ pre code {
                 content: "";
                 display: inline-block;
                 width: 0;
-            	height: 0;
-            	border-top: 10px solid transparent;
-            	border-bottom: 10px solid transparent;
-            	border-right: 10px solid darken($color, 3%);
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-right: 10px solid darken($color, 3%);
             }
             .source {
                 margin-top: 30px;
@@ -633,10 +633,10 @@ pre code {
         display: inline-block;
         margin: 0 auto;
         li {
-           float: left;
-           &.last {
-               margin-right: 0;
-           }
+            float: left;
+            &.last {
+                margin-right: 0;
+            }
         }
 
         a {
