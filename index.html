@@ -44,11 +44,11 @@ permalink: /
   </div>
 </section>
 
-<section id="team" class="contact section has-pattern">
+<section id="team" class="team section has-pattern">
   <div class="container">
-    <div class="contact-inner">
-      <h2 class="title  text-center">The Team</h2>
-      <p class="intro  text-center"></p>
+    <div class="team-inner">
+      <h2 class="title text-center">The Team</h2>
+      <p class="intro text-center"></p>
       {% for member in site.data.team %}
       <div class="author-message">
         <div class="profile">
@@ -72,8 +72,8 @@ permalink: /
 <section id="advisors" class="advisors section has-pattern">
   <div class="container">
     <div class="advisors-inner">
-      <h2 class="title  text-center">The Advisors</h2>
-      <p class="intro  text-center"></p>
+      <h2 class="title text-center">The Advisors</h2>
+      <p class="intro text-center"></p>
       {% for member in site.data.advisors %}
       <div class="author-message">
         <div class="profile">
@@ -90,7 +90,10 @@ permalink: /
       </div>
       {% endfor %}
       <div class="clearfix"></div>
-      <div id ="contact" class="info text-center">
+</section>
+
+<section id="contact" class="contact section has-pattern">
+      <div class="info text-center">
         <h4 class="sub-title">Get Connected</h4>
         <ul class="social-icons list-inline">
           <li><a href="https://twitter.com/{{ site.data.project.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
