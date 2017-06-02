@@ -7,7 +7,7 @@ permalink: /
     <h2 class="title">{{ site.title }}</h2>
     <p class="intro">{{ site.description }}</p>
     <div class="btns">
-      <a class="btn btn-cta-secondary" href="{{ site.data.project.demo_url }}" target="_blank">Demo</a>
+      <a class="btn btn-cta-secondary" href="{{ site.data.project.demo_url }}" target="_blank">Demo Login</a>
     </div>
 
     <ul class="meta list-inline">
@@ -23,12 +23,11 @@ permalink: /
       The fintech ecosystem is fostering actors transforming the financial industry through digital innovation. These innovations are enabling novel generations of products and new ways to reach - and communicate with - customers. This “socialisation of finance”, a term coined by Goldman Sachs in The Future of Finance (Part 3, March 2015), “is attacking over $4 trillion in addressable revenue”. Having a clear picture of this ecosystem at a given point in time is much needed to inform policy activities as evidenced by the European Commission call for tenders SMART 2016/0042.
       <br>
       <br>
-      In this project, we document the Fintech ecosystem and its past and present demographics which are key to understanding the status quo of these digital innovations, how they came into being and how they might develop. We combine novel knowledge representation and data analysis techniques to collect data and reveal links between actors (firms, investors, technologies, locations, etc.) of the fintech ecosystem which are otherwise not accessible. We enrich this data with linked open data. We apply Artificial Intelligence to learn from the past and the present in order to explore possible scenarios for the future development of the fintech ecosystem related to its location, types of services, technologies, etc.
-    </p>
+      In this project, we document the Fintech ecosystem and its past and present demographics which are key to understanding the status quo of these digital innovations, how they came into being and how they might develop. We combine novel knowledge representation and data analysis techniques to collect data and reveal links between actors (firms, investors, technologies, locations, etc.) of the fintech ecosystem which are otherwise not accessible. 
   </div>
 
   <div class="container">
-    <h2 class="title text-center">Our sponsors</h2>
+    <h2 class="title text-center">Funded By</h2>
     <div class="row">
     {% for sponsor in site.data.sponsors %}
       {% assign row_index = forloop.index | modulo: 3 %}
@@ -69,39 +68,38 @@ permalink: /
   </div>
 </section>
 
+
 <section id="advisors" class="advisors section has-pattern">
   <div class="container">
     <div class="advisors-inner">
       <h2 class="title text-center">The Advisors</h2>
+ 
       <p class="intro text-center"></p>
-      <div class="row">
       {% for member in site.data.advisors %}
-        {% assign row_index = forloop.index | modulo: 3 %}
-        {% if row_index == 1 and forloop.first == false %}
-      </div>
-      <div class="row">
-        {% endif %}
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail">
-            {% if member.img %}
-            <img class="img-responsive" src="/img/{{ member.img }}" alt="{{ member.name }}" />
-            {% else %}
-            <img class="img-responsive" src="/img/no_profile_img.jpg" alt="No picture provided" />
-            {% endif %}
-            <div class="caption">
-              <h3>{{ member.name }}</h3>
-            </div>
-          </div>
+      <div class="author-message">
+        <div class="profile">
+          {% if member.img %}
+          <img class="img-responsive" src="/img/{{ member.img }}" alt="{{ member.name }}" />
+          {% else %}
+          <img class="img-responsive" src="/img/no_profile_img.jpg" alt="No picture provided" />
+          {% endif %}
         </div>
-      {% endfor %}
+        <div class="speech-bubble">
+          <h3 class="sub-title">{{ member.name }}</h3>
+          <p>{{ member.bio }}</p>
+        </div>
       </div>
+      {% endfor %}
+      <div class="clearfix"></div>
     </div>
   </div>
 </section>
 
+
+
 <section id="contact" class="contact section has-pattern">
       <div class="info text-center">
-        <h4 class="sub-title">Get Connected</h4>
+        <h2 class="title">Contact Us</h2>
         <ul class="social-icons list-inline">
           <li class="last"><a href="mailto:{{ site.data.project.email }}"><i class="fa fa-envelope"></i></a></li>
         </ul>
