@@ -74,22 +74,29 @@ permalink: /
     <div class="advisors-inner">
       <h2 class="title text-center">The Advisors</h2>
       <p class="intro text-center"></p>
+      <div class="row">
       {% for member in site.data.advisors %}
-      <div class="author-message">
-        <div class="profile">
-          {% if member.img %}
-          <img class="img-responsive" src="/img/{{ member.img }}" alt="{{ member.name }}" />
-          {% else %}
-          <img class="img-responsive" src="/img/no_profile_img.jpg" alt="No picture provided" />
-          {% endif %}
-        </div>
-        <div class="speech-bubble">
-          <h3 class="sub-title">{{ member.name }}</h3>
-          <p>{{ member.bio }}</p>
-        </div>
+        {% assign row_index = forloop.index | modulo: 3 %}
+        {% if row_index == 1 and forloop.first == false %}
       </div>
+      <div class="row">
+        {% endif %}
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            {% if member.img %}
+            <img class="img-responsive" src="/img/{{ member.img }}" alt="{{ member.name }}" />
+            {% else %}
+            <img class="img-responsive" src="/img/no_profile_img.jpg" alt="No picture provided" />
+            {% endif %}
+            <div class="caption">
+              <h3>{{ member.name }}</h3>
+            </div>
+          </div>
+        </div>
       {% endfor %}
-      <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="contact" class="contact section has-pattern">
