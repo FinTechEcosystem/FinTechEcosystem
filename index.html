@@ -1,22 +1,109 @@
 ---
-layout: landing-page
-title: Ontological Modelling of the FinTech Ecosystem, a Source of Solutions to Operational Risks
+layout: default
 permalink: /
 ---
-<p>This project explores, using ontological modelling, the Fintech Ecosystem.  It seeks, inter alia, to improve our understanding of this Ecosystem, which is a critically important environment from which solutions to operational risks at financial institutions frequently arise. We combine novel knowledge representation and data modelling techniques to reveal links between concepts represented in the data that otherwise are not accessible.</p>
+<section id="promo" class="promo section offset-header">
+  <div class="container text-center">
+    <h2 class="title">{{ site.title }}</h2>
+    <p class="intro">{{ site.description }}</p>
+    <div class="btns">
+      <a class="btn btn-cta-secondary" href="{{ site.data.project.demo_url }}" target="_blank">Demo Login</a>
+    </div>
 
-<p>Revisit this page soon for more information or <a href="/contact">contact us</a>.</p>
+    <ul class="meta list-inline">
+      <!-- <li><a href="https://github.com/{{ site.data.project.github }}" target="_blank">View on GitHub</a></li> -->
+    </ul>
+  </div>
+</section>
 
-<p>Our sponsors :</p>
+<section id="about" class="about section">
+  <div class="container">
+    <h2 class="title text-center">About This Project</h2>
+    <p class="intro text-center">
+      The fintech ecosystem is fostering actors transforming the financial industry through digital innovation. These innovations are enabling novel generations of products and new ways to reach - and communicate with - customers. This “socialisation of finance”, a term coined by Goldman Sachs in The Future of Finance (Part 3, March 2015), “is attacking over $4 trillion in addressable revenue”. Having a clear picture of this ecosystem at a given point in time is much needed to inform policy activities as evidenced by the European Commission call for tenders SMART 2016/0042.
+      <br>
+      <br>
+      In this project, we document the Fintech ecosystem and its past and present demographics which are key to understanding the status quo of these digital innovations, how they came into being and how they might develop. We combine novel knowledge representation and data analysis techniques to collect data and reveal links between actors (firms, investors, technologies, locations, etc.) of the fintech ecosystem which are otherwise not accessible. 
+  </div>
 
-<div class="pure-g">
-  <div class="pure-u-1-3">
-    <img class="pure-img" src="/img/ucd-logo.png" alt="UCD logo">
+  <div class="container">
+    <h2 class="title text-center">Funded By</h2>
+    <div class="row">
+    {% for sponsor in site.data.sponsors %}
+      {% assign row_index = forloop.index | modulo: 3 %}
+      {% if row_index == 1 and forloop.first == false %}
+    </div>
+    <div class="row">
+      {% endif %}
+      <div class="sponsor col-md-4 col-sm-6 col-xs-12">
+        <img src="/img/{{ sponsor.img }}" alt="{{ sponsor.name }}">
+      </div>
+    {% endfor %}
+    </div>
   </div>
-  <div class="pure-u-1-3">
-    <img class="pure-img" src="/img/eu-logo.jpg" alt="EU logo">
+</section>
+
+<section id="team" class="team section has-pattern">
+  <div class="container">
+    <div class="team-inner">
+      <h2 class="title text-center">The Team</h2>
+      <p class="intro text-center"></p>
+      {% for member in site.data.team %}
+      <div class="author-message">
+        <div class="profile">
+          {% if member.img %}
+          <img class="img-responsive" src="/img/{{ member.img }}" alt="{{ member.name }}" />
+          {% else %}
+          <img class="img-responsive" src="/img/no_profile_img.jpg" alt="No picture provided" />
+          {% endif %}
+        </div>
+        <div class="speech-bubble">
+          <h3 class="sub-title">{{ member.name }}</h3>
+          <p>{{ member.bio }}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="clearfix"></div>
+    </div>
   </div>
-  <div class="pure-u-1-3">
-    <img class="pure-img" src="img/GRCTC-logo.jpg" alt="GRCTC logo">
+</section>
+
+
+<section id="advisors" class="advisors section has-pattern">
+  <div class="container">
+    <div class="advisors-inner">
+      <h2 class="title text-center">The Advisors</h2>
+ 
+      <p class="intro text-center"></p>
+      {% for member in site.data.advisors %}
+      <div class="author-message">
+        <div class="profile">
+          {% if member.img %}
+          <img class="img-responsive" src="/img/{{ member.img }}" alt="{{ member.name }}" />
+          {% else %}
+          <img class="img-responsive" src="/img/no_profile_img.jpg" alt="No picture provided" />
+          {% endif %}
+        </div>
+        <div class="speech-bubble">
+          <h3 class="sub-title">{{ member.name }}</h3>
+          <p>{{ member.bio }}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <div class="clearfix"></div>
+    </div>
   </div>
-</div>
+</section>
+
+
+
+<section id="contact" class="contact section has-pattern">
+      <div class="info text-center">
+        <h2 class="title">Contact Us</h2>
+        <ul class="social-icons list-inline">
+          <li class="last"><a href="mailto:{{ site.data.project.email }}"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

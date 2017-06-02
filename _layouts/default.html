@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
   {% include head.html %}
-
-  <body>
-
+  <body data-spy="scroll">
     {% include header.html %}
 
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
 
     {% include footer.html %}
 
+    <script type="text/javascript" src="{{ site.baseurl }}/plugins/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/plugins/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
   </body>
-
 </html>
