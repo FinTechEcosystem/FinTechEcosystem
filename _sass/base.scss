@@ -356,9 +356,18 @@ pre code {
             @include border-radius(4px);
             position: relative;
 
-            .sub-title {
+            .member-name {
                 color: darken($color, 30%);
                 font-size: 16px;
+                font-weight: 700;
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            .member-role {
+                color: darken($color, 30%);
+                font-size: 14px;
+                font-weight: 700;
                 margin-top: 0;
                 margin-bottom: 30px;
             }
