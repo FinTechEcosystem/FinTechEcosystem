@@ -1,6 +1,6 @@
-# FinTech Ecosystem website
+# Fintech Ecosystem website
 
-Website of the [FinTech Ecosystem project][fintech ecosystem].
+Website of the [Fintech Ecosystem project][fintech ecosystem].
 
 This website is built using [Jekyll][jekyll], based on the [devAid][devaid] template and hosted on [GitHub Pages][github pages].
 
